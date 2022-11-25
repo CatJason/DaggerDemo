@@ -11,8 +11,12 @@ import dagger.android.DaggerActivity_MembersInjector
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+    private var biliService: BiliService? = null
+
     @Inject
-    var biliService: BiliService? = null
+    fun setBiliService(biliService: BiliService?){
+        this.biliService = biliService
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
