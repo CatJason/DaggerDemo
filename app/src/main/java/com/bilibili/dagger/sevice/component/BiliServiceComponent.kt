@@ -5,6 +5,6 @@ import com.bilibili.dagger.sevice.module.BiliServiceModule
 import dagger.Component
 
 @Component(modules = [BiliServiceModule::class])
-abstract class BiliServiceComponent {
-    abstract fun inject(activity: MainActivity)
+interface BiliServiceComponent {
+    fun inject(activity: MainActivity)
 }
