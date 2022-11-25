@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        DaggerBiliServiceComponent.builder().biliServiceModule(BiliServiceModule()).build().inject(this)
+        // DaggerBiliServiceComponent.builder().biliServiceModule(BiliServiceModule()).build().inject(this)
+        DaggerBiliServiceComponent.create().inject(this)
     }
 }
