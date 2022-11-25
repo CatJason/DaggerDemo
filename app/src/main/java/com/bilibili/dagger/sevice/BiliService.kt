@@ -1,4 +1,6 @@
 package com.bilibili.dagger.sevice
 
-class BiliService {
+import javax.inject.Inject
+
+class BiliService @Inject constructor() {
 }
