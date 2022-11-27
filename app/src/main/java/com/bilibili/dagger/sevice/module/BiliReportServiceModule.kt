@@ -5,10 +5,10 @@ import com.bilibili.dagger.sevice.BiliService
 import dagger.Module
 import dagger.Provides
 
-@Module(includes = [BiliReportServiceModule::class])
-class BiliServiceModule {
+@Module
+class BiliReportServiceModule {
     @Provides
-    fun provideBiliService(biliReportService: BiliReportService): BiliService {
-        return BiliService(biliReportService)
+    fun provideBiliReportService(): BiliReportService {
+        return BiliReportService()
     }
 }

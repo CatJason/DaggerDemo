@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val builder = DaggerBiliServiceComponent
             .builder()
-            .biliServiceModule(BiliServiceModule(BiliReportService()))
+            .biliServiceModule(BiliServiceModule())
             .build()
         builder.inject(this)
     }
