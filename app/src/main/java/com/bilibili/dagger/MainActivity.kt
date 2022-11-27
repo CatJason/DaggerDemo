@@ -2,7 +2,10 @@ package com.bilibili.dagger
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bilibili.dagger.sevice.BiliReportService
 import com.bilibili.dagger.sevice.BiliService
+import com.bilibili.dagger.sevice.component.DaggerBiliServiceComponent
+import com.bilibili.dagger.sevice.module.BiliServiceModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +15,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // DaggerBiliServiceComponent.create().inject(this)
-        MainActivity_MembersInjector.injectBiliService(this, BiliService())
+        val builder = DaggerBiliServiceComponent
+            .builder()
+            .biliServiceModule(BiliServiceModule(BiliReportService()))
+            .build()
+        builder.inject(this)
     }
 }

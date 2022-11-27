@@ -5,7 +5,7 @@ import com.bilibili.dagger.sevice.BiliService
 import com.bilibili.dagger.sevice.module.BiliServiceModule
 import dagger.Component
 
-@Component
+@Component(modules = [BiliServiceModule::class])
 interface BiliServiceComponent {
     fun inject(mainActivity: MainActivity)
 }
