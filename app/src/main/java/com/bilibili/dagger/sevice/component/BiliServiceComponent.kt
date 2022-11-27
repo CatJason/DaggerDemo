@@ -7,5 +7,5 @@ import dagger.Component
 
 @Component(modules = [BiliServiceModule::class])
 interface BiliServiceComponent {
-    fun provideBiliService(): BiliService
+    fun inject(mainActivity: MainActivity)
 }
