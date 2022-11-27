@@ -3,9 +3,6 @@ package com.bilibili.dagger
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bilibili.dagger.sevice.BiliService
-import com.bilibili.dagger.sevice.component.DaggerBiliServiceComponent
-import com.bilibili.dagger.sevice.module.BiliServiceModule
-import com.bilibili.dagger.sevice.module.BiliServiceModule_ProvideBiliServiceFactory
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -16,9 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // DaggerBiliServiceComponent.create().inject(this)
-        MainActivity_MembersInjector.injectBiliService(
-            this,
-            BiliServiceModule_ProvideBiliServiceFactory.provideBiliService(BiliServiceModule())
-        )
+        MainActivity_MembersInjector.injectBiliService(this, BiliService())
     }
 }
