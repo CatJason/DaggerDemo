@@ -2,10 +2,8 @@ package com.bilibili.dagger
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.bilibili.dagger.sevice.BiliReportService
-import com.bilibili.dagger.sevice.BiliService
 import com.bilibili.dagger.sevice.component.DaggerBiliServiceComponent
-import com.bilibili.dagger.sevice.module.BiliServiceModule
+import com.bilibili.service.BiliService
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {

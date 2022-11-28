@@ -1,7 +1,8 @@
-package com.bilibili.dagger.sevice.module
+package com.bilibili.service.module
 
-import com.bilibili.dagger.sevice.BiliReportService
-import com.bilibili.dagger.sevice.BiliService
+import com.bilibili.reportservice.BiliReportService
+import com.bilibili.reportservice.module.BiliReportServiceModule
+import com.bilibili.service.BiliService
 import dagger.Module
 import dagger.Provides
 

@@ -1,4 +1,4 @@
-package com.bilibili.dagger.sevice
+package com.bilibili.reportservice
 
 class BiliReportService {
     fun report() {
