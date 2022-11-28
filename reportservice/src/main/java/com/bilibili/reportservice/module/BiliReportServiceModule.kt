@@ -3,11 +3,19 @@ package com.bilibili.reportservice.module
 import com.bilibili.reportservice.BiliReportService
 import dagger.Module
 import dagger.Provides
+import javax.inject.Named
 
 @Module
 class BiliReportServiceModule {
     @Provides
-    fun provideBiliReportService(): BiliReportService {
-        return BiliReportService()
+    @Named("danmakuReport")
+    fun provideBiliDanmakuReportService(): BiliReportService {
+        return BiliReportService("danmaku")
+    }
+
+    @Provides
+    @Named("playerReport")
+    fun provideBiliPlayerReportService(): BiliReportService {
+        return BiliReportService("player")
     }
 }

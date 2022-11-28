@@ -1,6 +1,14 @@
 package com.bilibili.reportservice
 
 class BiliReportService {
+    lateinit var info: String
+
+    constructor()
+
+    constructor(info: String) {
+        this.info = info
+    }
+
     fun report() {
 
     }

@@ -8,6 +8,7 @@ import com.bilibili.reportservice.module.BiliReportServiceModule
 import com.bilibili.service.BiliService
 import com.bilibili.service.module.BiliServiceModule
 import javax.inject.Inject
+import javax.inject.Named
 
 class MainActivity : AppCompatActivity() {
     @Inject
