@@ -7,7 +7,7 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Named
 
-@Module(includes = [BiliReportServiceModule::class])
+@Module
 class BiliServiceModule {
     @Provides
     fun provideBiliService(@Named("danmakuReport") biliReportService: BiliReportService): BiliService {
