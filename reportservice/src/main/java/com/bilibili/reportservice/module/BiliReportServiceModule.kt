@@ -1,21 +1,20 @@
 package com.bilibili.reportservice.module
 
+import com.bilibili.reportservice.BiliDanmakuReportService
+import com.bilibili.reportservice.BiliPlayerReportService
 import com.bilibili.reportservice.BiliReportService
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
 
 @Module
-class BiliReportServiceModule {
-    @Provides
+abstract class BiliReportServiceModule {
+    @Binds
     @Named("danmakuReport")
-    fun provideBiliDanmakuReportService(): BiliReportService {
-        return BiliReportService("danmaku")
-    }
+    abstract fun bindBiliDanmakuReportServiceFactory(biliDanmakuReportService: BiliDanmakuReportService): BiliReportService
 
-    @Provides
+    @Binds
     @Named("playerReport")
-    fun provideBiliPlayerReportService(): BiliReportService {
-        return BiliReportService("player")
-    }
+    abstract fun bindBiliPlayerReportServiceFactory(biliPlayerReportService: BiliPlayerReportService): BiliReportService
 }

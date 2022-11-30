@@ -1,6 +1,6 @@
 package com.bilibili.reportservice
 
-class BiliReportService {
+open class BiliReportService {
     lateinit var info: String
 
     constructor()

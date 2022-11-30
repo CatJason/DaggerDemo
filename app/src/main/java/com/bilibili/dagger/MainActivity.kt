@@ -8,9 +8,11 @@ import com.bilibili.service.BiliService
 import com.bilibili.service.component.DaggerBiliServiceComponent
 import com.bilibili.service.module.BiliServiceModule
 import javax.inject.Inject
+import javax.inject.Named
 
 class MainActivity : AppCompatActivity() {
     @Inject
+    @Named("danmaku")
     lateinit var biliService: BiliService
 
     override fun onCreate(savedInstanceState: Bundle?) {
