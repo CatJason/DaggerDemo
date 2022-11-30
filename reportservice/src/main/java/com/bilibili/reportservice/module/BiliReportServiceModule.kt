@@ -9,20 +9,16 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-abstract class BiliReportServiceModule {
-    companion object{
-        @Provides
-        fun provideBiliDanmakuReportService(): BiliDanmakuReportService{
-            return BiliDanmakuReportService()
-        }
+class BiliReportServiceModule {
+    @Named("danmakuReport")
+    @Provides
+    fun provideBiliDanmakuReportService(): BiliReportService {
+        return BiliDanmakuReportService()
     }
 
-
-    @Binds
-    @Named("danmakuReport")
-    abstract fun bindBiliDanmakuReportServiceFactory(biliDanmakuReportService: BiliDanmakuReportService): BiliReportService
-
-    @Binds
     @Named("playerReport")
-    abstract fun bindBiliPlayerReportServiceFactory(biliPlayerReportService: BiliPlayerReportService): BiliReportService
+    @Provides
+    fun provideBiliPlayerReportService(): BiliReportService {
+        return BiliPlayerReportService()
+    }
 }

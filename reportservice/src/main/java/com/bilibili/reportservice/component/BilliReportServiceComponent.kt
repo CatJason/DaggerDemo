@@ -10,7 +10,7 @@ import javax.inject.Named
 @Component(modules = [BiliReportServiceModule::class])
 interface BilliReportServiceComponent {
     @Named("danmakuReport")
-    fun provideBiliDanmakuReportService(): BiliDanmakuReportService
+    fun provideBiliDanmakuReportService(): BiliReportService
 
     @Named("playerReport")
     fun provideBiliPlayerReportService(): BiliReportService

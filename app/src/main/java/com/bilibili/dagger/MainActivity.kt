@@ -32,6 +32,6 @@ class MainActivity : AppCompatActivity() {
             .biliServiceComponent(biliServiceComponent)
             .build()
 
-        mainActivityComponent.inject(this)
+        mainActivityComponent.buildSubComponent().subInject(this)
     }
 }
