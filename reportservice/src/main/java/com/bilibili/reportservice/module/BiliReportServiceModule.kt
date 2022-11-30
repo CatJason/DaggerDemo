@@ -15,7 +15,7 @@ class BiliReportServiceModule {
 
     @Provides
     @Named("playerReport")
-    fun provideBiliPlayerReportService(): BiliReportService {
+    private fun provideBiliPlayerReportService(): BiliReportService {
         return BiliReportService("player")
     }
 }
