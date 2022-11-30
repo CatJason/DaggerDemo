@@ -10,10 +10,13 @@ import javax.inject.Named
 
 @Module
 abstract class BiliReportServiceModule {
-    @Provides
-    fun provideBiliDanmakuReportService(): BiliDanmakuReportService{
-        return BiliDanmakuReportService()
+    companion object{
+        @Provides
+        fun provideBiliDanmakuReportService(): BiliDanmakuReportService{
+            return BiliDanmakuReportService()
+        }
     }
+
 
     @Binds
     @Named("danmakuReport")
