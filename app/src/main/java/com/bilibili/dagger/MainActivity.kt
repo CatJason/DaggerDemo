@@ -21,17 +21,16 @@ class MainActivity : AppCompatActivity() {
 
         val biliReportServiceComponent = DaggerBilliReportServiceComponent.create()
 
-        val biliServiceComponent = DaggerBiliServiceComponent
-            .builder()
+        val biliServiceComponent = DaggerBiliServiceComponent.builder()
             .biliServiceModule(BiliServiceModule())
             .billiReportServiceComponent(biliReportServiceComponent)
             .build()
 
-        val mainActivityComponent = DaggerMainActivityComponent
-            .builder()
+        DaggerMainActivityComponent.builder()
             .biliServiceComponent(biliServiceComponent)
             .build()
-
-        mainActivityComponent.buildSubComponent().subInject(this)
+            .getSubComponentBuilder()
+            .build()
+            .inject(this)
     }
 }
