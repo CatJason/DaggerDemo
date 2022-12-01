@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
     @Inject
-    lateinit var biliServices: MutableSet<BiliService>
+    lateinit var biliServices: Map<String, BiliService>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

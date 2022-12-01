@@ -11,5 +11,5 @@ import javax.inject.Named
     dependencies = [BilliReportServiceComponent::class]
 )
 interface BiliServiceComponent {
-    fun provideBiliServices(): MutableSet<BiliService>
+    fun provideBiliServices(): Map<String, BiliService>
 }

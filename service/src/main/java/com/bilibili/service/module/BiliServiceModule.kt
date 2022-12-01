@@ -6,19 +6,23 @@ import com.bilibili.reportservice.module.BiliReportServiceModule
 import com.bilibili.service.BiliService
 import dagger.Module
 import dagger.Provides
+import dagger.multibindings.IntoMap
 import dagger.multibindings.IntoSet
+import dagger.multibindings.StringKey
 import javax.inject.Named
 
 @Module
 class BiliServiceModule {
     @Provides
-    @IntoSet
+    @IntoMap
+    @StringKey("danmaku")
     fun provideBiliDanmakuService(@Named("danmakuReport") biliReportService: BiliReportService): BiliService {
         return BiliService(biliReportService)
     }
 
     @Provides
-    @IntoSet
+    @IntoMap
+    @StringKey("player")
     fun provideBiliPlayerService(@Named("playerReport") biliReportService: BiliReportService): BiliService {
         return BiliService(biliReportService)
     }
