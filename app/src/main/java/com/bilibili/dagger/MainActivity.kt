@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bilibili.dagger.component.DaggerMainActivityComponent
 import com.bilibili.reportservice.component.DaggerBilliReportServiceComponent
 import com.bilibili.service.BiliService
+import com.bilibili.service.BiliServiceMapKey
 import com.bilibili.service.component.DaggerBiliServiceComponent
 import com.bilibili.service.module.BiliServiceModule
 import javax.inject.Inject
