@@ -6,7 +6,9 @@ import com.bilibili.reportservice.BiliReportService
 import com.bilibili.reportservice.module.BiliReportServiceModule
 import dagger.Component
 import javax.inject.Named
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [BiliReportServiceModule::class])
 interface BilliReportServiceComponent {
     @Named("danmakuReport")
